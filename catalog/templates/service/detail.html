@@ -1,0 +1,6 @@
+<h1>{{ service }}</h1>
+<ul>
+{% for area in service.area_set.all %}
+    <li><a href="{% url 'area_detail' area.id %}">{{ area }}</a></li>
+{% endfor %}
+</ul>
